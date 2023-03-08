@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,700&family=Roboto&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+}
+// i{
+//   border: 1px solid black;
+//   width: 50px;
+//   height: 50px;
+// }
+.header {
+  padding: 20px 10px;
+  display: grid;
+  text-align: center;
+  justify-content: space-between;
+  background-color: black;
+  grid-template-columns: 1fr 3fr;
+  .logo {
+    margin-left: 10px;
+    width: 235px;
+    height: 70px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      background: transparent;
+    }
+  }
+  .nav {
+    margin-top: 19px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+    gap: 30px;
+    a {
+      color: white;
+      font-size: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-display: none;
+      font-family: sans-serif;
+    }
+    a:hover {
+      color: #7177e4;
+      transition: 1s;
+      border-bottom: 2px solid #7177e4;
+    }
+  }
+}
+.section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #1a1825;
+  width: 100%;
+
+  height: 100vh;
+  .img {
+    display: flex;
+    justify-content: center;
+  }
+  .text {
+    // padding-top: 85px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+      h2{
+        font-size: 72px;
+        font-weight: 100;
+        color: white;
+        line-height: 74px;
+
+      }
+    h1 {
+      font-size: 72px;
+      font-weight: 900;
+      color: white;
+      line-height: 74px;
+    }
+
+    p {
+      margin: 20px 0;
+      font-size: 20px;
+      font-weight: 800;
+    }
+    span {
+      font-size: 18px;
+      font-weight: 500;
+      width: 457px;
+      word-wrap: break-word;
+    }
+  }
+}
+.section2 {
+  // padding: 50px 30px;
+  display: grid;
+  justify-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding: 30px 0;
+  background: #1a1825;
+  width: 100%;
+  height: auto;
+  .card {
+    margin: 30px 0;
+    height: auto;
+    display: flex;
+    height: 340px;
+
+    // justify-items: flex-end;
+    .img {
+      width: 454px;
+      height: 340px;
+      // display: flex;
+      // margin-left: 20px;
+      // justify-content: flex-end;
+      img {
+        max-width: 100%;
+        height: 341px;
+        object-fit: cover;
+      }
+    }
+    .aaa {
+      width: 450px;
+    }
+    .text {
+      background: #7772ab;
+      padding: 20px 25px;
+      color: white;
+      width: 489px;
+      font-family: sans-serif;
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        font-weight: 400;
+      }
+      p {
+        width: 414px;
+        font-size: 28px;
+        word-wrap: break-word;
+        margin: 30px 0;
+      }
+      span {
+        word-wrap: break-word;
+        width: 414px;
+
+        font-size: 20px;
+      }
+    }
+  }
+}
+.section3 {
+  padding: 30px 0px;
+  display: grid;
+  width: 100%;
+
+  grid-template-columns: 1fr 1fr;
+  background: #1a1825;
+  .part1 {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 42px;
+      font-weight: 500;
+      margin: 20px 0;
+    }
+    p {
+      margin: 15px 0;
+      font-size: 20px;
+    }
+  }
+  .part2 {
+    padding: 15px;
+    background-color: #8883c4;
+    color: white;
+    display: grid;
+    grid-template-areas:
+      "adsoyad email"
+      " telefon telefon"
+      "movzu movzu"
+      " mesaj mesaj"
+      "button button";
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 10px;
+      font-size: 20px;
+    }
+
+    input {
+      height: 50px;
+      vertical-align: middle;
+      outline: none;
+      background: transparent;
+      border: none;
+      color: white;
+      border-bottom: 2px solid white;
+      padding: 15px 20px;
+    }
+    input:focus {
+      border: 2px solid white;
+      transition: 0.5s;
+      color: black;
+      background-color: white;
+    }
+
+    .adsoyad {
+      grid-area: adsoyad;
+    }
+    .email {
+      grid-area: email;
+    }
+    .telefon {
+      grid-area: telefon;
+    }
+    .movzu {
+      grid-area: movzu;
+    }
+    .mesaj {
+      grid-area: mesaj;
+      input {
+        height: 120px;
+      }
+    }
+    button {
+      grid-area: button;
+      padding: 25px 15px;
+      background-color: white;
+      outline: none;
+      margin: 15px 10px;
+      border: none;
+    }
+  }
+}
+.section4 {
+  padding: 10px 5px;
+  // width: 100%;
+
+
+  background-color: #1a1825;
+}
+.section5 {
+  background-color: #5b568e;
+  height: auto;
+  width: 100%;
+
+  // wrap
+  padding: 50px 0;
+  display: flex;
+  // grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: center;
+
+  .box_btn {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .box {
+    .price_num{
+      color: black;
+      font-size: 30px;
+      font-weight: 700;
+    }
+    width: auto;
+    // border: 0.5px solid black;
+    border-radius: 10px;
+    height: 750px;
+    background: white;
+    padding: 20px 15px;
+    display: grid;
+    box-shadow: #1a1825;
+    justify-content: center;
+    justify-items: center;
+    position: relative;
+    .img {
+      width: 130px;
+      height: 200px;
+      // display: grid;
+      // text-align: center;
+      // justify-items: center;
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+    .text {
+      word-wrap: break-word;
+      // padding-top: 80px;
+      text-align: center;
+      color: #1f3790;
+      position: absolute;
+      top: 250px;
+      h3 {
+        font-size: 38px;
+      }
+      p {
+        text-align: left;
+        width: auto;
+        padding: 15px 20px;
+        height: auto;
+        font-weight: 800;
+        font-size: 16.5px;
+        word-wrap: break-word;
+        margin: 10px 0;
+        line-height: 30px;
+        direction: ltr;
+        color: black;
+        i{
+          color: #605b94;
+        }
+      }
+    }
+  }
+  .basic {
+    .text {
+      color: #583a2b;
+    }
+  }
+  .standart {
+    .text {
+      color: #777676;
+    }
+  }
+  .premium {
+    .text {
+      color: #d2b551;
+    }
+  }
+  .btn_a {
+    button {
+      background-color: #a199f7;
+      padding: 10px 15px;
+      color: white;
+      margin: 20px 10px;
+      border: none;
+      width: 480px;
+      border-radius: 7px;
+      font-size: 20px;
+    }
+    // .basic {
+    //   background-color: #583a2b;
+    // }
+    // .standart {
+    //   background-color: #777676;
+    // }
+    // .premium {
+    //   background-color: #d2b551;
+    // }
+  }
+}
+
+.footer {
+  text-align: center;
+  background-color: #1a1825;
+  color: white;
+  padding: 40px 0 20px 0;
+  font-family: sans-serif;
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    margin: 15px;
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    justify-items: center;
+    .logo {
+      margin-left: 0;
+    }
+    .nav {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+  .section1 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1, 3fr 1fr;
+    height: auto;
+    .text {
+      padding-left: 15px;
+      padding-bottom: 15px;
+      h2,h1{
+        font-size: 56px;
+      }
+      p{
+        font-size: 15px;
+      }
+      span{
+        font-size: 12px;
+      }
+    }
+  }
+  .section2 {
+    .card {
+      height: auto;
+      flex-direction: column;
+
+      .text {
+        width: 404px;
+      }
+    }
+  }
+  .section3 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .section5 {
+    height: auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    
+
+    
+  }
+  // .footer{
+  //   position: absolute;
+  //   bottom: 0px;
+  // }
+}
