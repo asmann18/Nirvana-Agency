@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
   // font-family: 'Roboto', sans-serif;
 }
 // i{
@@ -253,6 +254,7 @@
   background-color: #1a1825;
 }
 .section5 {
+  box-sizing: content-box;
   background-color: #5b568e;
   height: auto;
   width: 100%;
@@ -269,6 +271,7 @@
   .box_btn {
     display: grid;
     grid-template-columns: 1fr;
+    // grid-template-rows: ;
   }
   .box {
     .price_num {
@@ -280,7 +283,7 @@
     max-width: 400px;
     // border: 0.5px solid black;
     border-radius: 10px;
-    height: 750px;
+    height: 800px;
     background: white;
     padding: 20px 15px;
     display: grid;
@@ -317,9 +320,10 @@
         padding: 15px 20px;
         height: auto;
         font-weight: 800;
-        font-size: 15px;
+        font-size: 14px;
         word-wrap: break-word;
         margin: 10px 0;
+        padding-bottom: 10px;
         line-height: 30px;
         direction: ltr;
         color: black;
@@ -349,7 +353,7 @@
       background-color: #a199f7;
       padding: 10px 15px;
       color: white;
-      margin: 20px 30px;
+      margin: 20px 0px;
       border: none;
       width: 400px;
       border-radius: 7px;
@@ -394,8 +398,12 @@
       height: auto;
     }
     .nav {
+      text-align: center;
+      justify-items: center;
       justify-content: center;
       flex-direction: column;
+      margin: 0;
+      padding: 0;
     }
   }
   .section1 {
@@ -404,15 +412,15 @@
     height: auto;
     justify-content: center;
     justify-items: center;
-    img{
+    img {
       width: 320px;
     }
     .text {
-      padding-left: 45px;
-      padding-bottom: 15px;
+      // padding-left: 40px;
+      // padding-bottom: 15px;
       h2,
       h1 {
-        font-size: 50px;
+        font-size: 45px;
       }
       p {
         font-size: 15px;
@@ -426,26 +434,39 @@
   }
   .section2 {
     .card {
-
       height: auto;
       flex-direction: column;
 
-      .text,.img {
+      .text,
+      .img {
         width: 380px;
         margin: 0;
-        padding: 3px;
+        padding: 20px 0;
+        padding-left: 5px;
+        span{text-align: center;}
+        a{
+          text-align: left;
+        }
+      }
+      .text {
+        p {
+          font-size: 19px;
+        }
+        span {
+          font-size: 12px;
+        }
       }
     }
   }
   .section3 {
     grid-template-columns: 1fr;
     gap: 10px;
-    .part2{
+    .part2 {
       max-width: 100%;
       padding: 0;
       display: flex;
       flex-direction: column;
-      button{
+      button {
         max-width: 100%;
       }
     }
@@ -454,8 +475,16 @@
     height: auto;
     grid-template-columns: 1fr;
     gap: 20px;
-    .box{
-      margin: 0 0 0 2px ;
+    .box {
+      margin: 0 0 0 2px;
+      padding: 0;
+      padding-top: 5px;
+      .text{
+        padding: 0;
+        p{
+          padding: 0;
+        }
+      }
       // padding: 5px;
     }
   }

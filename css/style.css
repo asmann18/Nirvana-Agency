@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
 .header {
@@ -228,6 +229,7 @@
 }
 
 .section5 {
+  box-sizing: content-box;
   background-color: #5b568e;
   height: auto;
   width: 100%;
@@ -246,7 +248,7 @@
   width: auto;
   max-width: 400px;
   border-radius: 10px;
-  height: 750px;
+  height: 800px;
   background: white;
   padding: 20px 15px;
   display: grid;
@@ -287,9 +289,10 @@
   padding: 15px 20px;
   height: auto;
   font-weight: 800;
-  font-size: 15px;
+  font-size: 14px;
   word-wrap: break-word;
   margin: 10px 0;
+  padding-bottom: 10px;
   line-height: 30px;
   direction: ltr;
   color: black;
@@ -310,7 +313,7 @@
   background-color: #a199f7;
   padding: 10px 15px;
   color: white;
-  margin: 20px 30px;
+  margin: 20px 0px;
   border: none;
   width: 400px;
   border-radius: 7px;
@@ -345,8 +348,12 @@
     height: auto;
   }
   .header .nav {
+    text-align: center;
+    justify-items: center;
     justify-content: center;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
   .section1 {
     grid-template-columns: 1fr;
@@ -358,13 +365,9 @@
   .section1 img {
     width: 320px;
   }
-  .section1 .text {
-    padding-left: 45px;
-    padding-bottom: 15px;
-  }
   .section1 .text h2,
   .section1 .text h1 {
-    font-size: 50px;
+    font-size: 45px;
   }
   .section1 .text p {
     font-size: 15px;
@@ -378,10 +381,26 @@
     height: auto;
     flex-direction: column;
   }
-  .section2 .card .text, .section2 .card .img {
+  .section2 .card .text,
+  .section2 .card .img {
     width: 380px;
     margin: 0;
-    padding: 3px;
+    padding: 20px 0;
+    padding-left: 5px;
+  }
+  .section2 .card .text span,
+  .section2 .card .img span {
+    text-align: center;
+  }
+  .section2 .card .text a,
+  .section2 .card .img a {
+    text-align: left;
+  }
+  .section2 .card .text p {
+    font-size: 19px;
+  }
+  .section2 .card .text span {
+    font-size: 12px;
   }
   .section3 {
     grid-template-columns: 1fr;
@@ -403,5 +422,13 @@
   }
   .section5 .box {
     margin: 0 0 0 2px;
+    padding: 0;
+    padding-top: 5px;
+  }
+  .section5 .box .text {
+    padding: 0;
+  }
+  .section5 .box .text p {
+    padding: 0;
   }
 }/*# sourceMappingURL=style.css.map */
