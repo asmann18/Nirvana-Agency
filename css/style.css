@@ -4,11 +4,15 @@
   margin: 0;
   font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .header {
   padding: 20px 10px;
   display: grid;
+  width: 100%;
+  position: sticky;
+  z-index: 2;
   text-align: center;
   justify-content: space-between;
   background-color: black;
@@ -52,7 +56,7 @@
   grid-template-columns: 1fr 1fr;
   background: #1a1825;
   width: 100%;
-  height: 100vh;
+  height: auto;
 }
 .section1 .img {
   display: flex;
@@ -89,58 +93,47 @@
   word-wrap: break-word;
 }
 
-.section2 {
+.section2_new {
   display: grid;
-  justify-items: center;
   grid-template-columns: 1fr;
-  gap: 15px;
-  padding: 30px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: #1a1825;
+  gap: 25px;
+  justify-content: center;
+  justify-items: center;
+}
+.section2_new .card {
+  background: #7772ab;
+  width: 650px;
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section2_new .card .img {
+  width: 300px;
+  height: 300px;
+}
+.section2_new .card .img img {
   width: 100%;
   height: auto;
 }
-.section2 .card {
-  margin: 30px 0;
-  height: auto;
-  display: flex;
-  height: 340px;
-}
-.section2 .card .img {
-  width: 454px;
-  height: 340px;
-}
-.section2 .card .img img {
-  max-width: 100%;
-  height: 341px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.section2 .card .aaa {
-  width: 450px;
-}
-.section2 .card .text {
-  background: #7772ab;
-  padding: 20px 25px;
+.section2_new .card .text {
+  padding: 5px 20px;
+  width: 300px;
+  height: 300px;
   color: white;
-  width: 489px;
-  font-family: sans-serif;
 }
-.section2 .card .text a {
+.section2_new .card .text a {
   text-decoration: none;
   color: white;
-  font-size: 17px;
-  font-weight: 400;
 }
-.section2 .card .text p {
-  width: 414px;
-  font-size: 28px;
-  word-wrap: break-word;
-  margin: 30px 0;
+.section2_new .card .text p {
+  font-size: 27px;
+  padding: 15px 0;
 }
-.section2 .card .text span {
-  word-wrap: break-word;
-  width: 414px;
-  font-size: 20px;
+.section2_new .card .text span {
+  font-size: 12px;
 }
 
 .section3 {
@@ -335,7 +328,7 @@
   font-size: 17px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1100px) {
   .header {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
@@ -365,42 +358,55 @@
   .section1 img {
     width: 320px;
   }
+  .section1 .text {
+    padding: 10px;
+  }
   .section1 .text h2,
   .section1 .text h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
   .section1 .text p {
-    font-size: 15px;
+    font-size: 14px;
   }
   .section1 .text span {
     font-size: 12px;
     width: 95%;
     word-wrap: break-word;
   }
+  .section2_new .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 300px;
+  }
+  .section2_new .card .text {
+    margin-top: 10px;
+  }
+  .section2 {
+    margin: auto;
+  }
   .section2 .card {
+    width: 250px;
     height: auto;
     flex-direction: column;
   }
   .section2 .card .text,
   .section2 .card .img {
-    width: 380px;
+    width: 250px;
+    height: 250px;
     margin: 0;
     padding: 20px 0;
     padding-left: 5px;
   }
-  .section2 .card .text span,
-  .section2 .card .img span {
-    text-align: center;
-  }
-  .section2 .card .text a,
-  .section2 .card .img a {
-    text-align: left;
+  .section2 .card .text {
+    margin-left: 5px;
+    max-width: 245px;
+    padding: 10px 10px;
   }
   .section2 .card .text p {
-    font-size: 19px;
+    font-size: 12px;
   }
   .section2 .card .text span {
-    font-size: 12px;
+    font-size: 8px;
   }
   .section3 {
     grid-template-columns: 1fr;
@@ -420,7 +426,11 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .section5 .btn_a button {
+    width: 330px;
+  }
   .section5 .box {
+    max-width: 336px;
     margin: 0 0 0 2px;
     padding: 0;
     padding-top: 5px;
@@ -430,5 +440,6 @@
   }
   .section5 .box .text p {
     padding: 0;
+    font-size: 11px;
   }
 }/*# sourceMappingURL=style.css.map */
